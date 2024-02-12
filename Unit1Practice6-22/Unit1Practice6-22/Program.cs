@@ -45,10 +45,10 @@ while (continuePlaying == true)
 {
     Console.WriteLine("Enter a language: ");
     string userLanguage = Console.ReadLine();
-    
+
     switch (userLanguage.ToLower().Trim())
     {
-        case "english": 
+        case "english":
             Console.WriteLine("Hello World");
             break;
         case "spanish":
@@ -57,7 +57,7 @@ while (continuePlaying == true)
         case "dutch":
             Console.WriteLine("hallo wereld");
             break;
-    } 
+    }
     Console.WriteLine("Would you like to continue? (y/n)");
     string userAnswer = Console.ReadLine();
     if (userAnswer == "y")
@@ -65,4 +65,50 @@ while (continuePlaying == true)
         continuePlaying = true;
     }
     else continuePlaying = false;
-} Console.WriteLine("Goodbye!");
+}
+Console.WriteLine("Goodbye!");
+
+//exercise 10 
+
+
+do
+{
+    Console.Write("Enter your height in inches: ");
+    int height = int.Parse(Console.ReadLine());
+    int neededHeight = (54 - height);
+    if (height >= 54)
+    {
+        Console.WriteLine("Great, you can ride the Raptor!");
+    }
+    else
+    {
+        Console.WriteLine($"Sorry, you cannot ride the Raptor. You need {neededHeight} more inches.");
+    }
+    Console.WriteLine("Would you like to continue? (y/n)");
+    string userContinue = Console.ReadLine();
+    if (userContinue == "y")
+    {
+        playAgain = true;
+    }
+    else playAgain = false;
+
+} while (playAgain == true);
+Console.WriteLine("Goodbye!");
+
+// exercise 11
+
+int i = 0;
+do
+{
+    for (i = 0; i <= 9; i++)
+    {
+        Console.WriteLine(i + " ");
+        Console.WriteLine("Would you like to continue?");
+        string userContinue = Console.ReadLine();
+        if (userContinue == "y" || userContinue == "yes")
+        {
+            playAgain = true;
+        }
+        else playAgain = false;
+    } 
+}while (playAgain == true);
